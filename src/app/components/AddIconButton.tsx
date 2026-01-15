@@ -11,7 +11,7 @@ const AddIconButton: React.FC<AddIconButtonProps> = ({ handleButtonClick }) => {
       <View
         style={{
           position: "absolute",
-          bottom: 30,
+          bottom: 50,
           right: 20,
           width: 56,
           height: 56,

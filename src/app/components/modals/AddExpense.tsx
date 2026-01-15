@@ -75,15 +75,17 @@ const AddExpense: React.FC<AddExpenseProps> = ({ handleCrossClick, category_id =
             <Text style={{ fontSize: 17, marginTop: 20 }}>Expence Name</Text>
             <TextInput
               placeholder="Enter name"
-              style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 5 }}
+              style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 5, color: "#000" }}
+              placeholderTextColor={"black"}
               onChangeText={(text) => setForm({ ...form, name: text })}
             />
             <Text style={{ fontSize: 17, marginTop: 20 }}>Spend Amount</Text>
             <TextInput
               placeholder="Enter amount"
               keyboardType="numeric"
-              style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 5 }}
+              style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 5, color: "#000" }}
               onChangeText={(text) => setForm({ ...form, amount: parseFloat(text) || 0 })}
+              placeholderTextColor={"black"}
             />
             {allCategories && allCategories.length > 0 ? (
               <>
@@ -94,7 +96,9 @@ const AddExpense: React.FC<AddExpenseProps> = ({ handleCrossClick, category_id =
                     if (!itemValue) return;
                     setForm({ ...form, category_id: itemValue });
                   }}
-                  style={{ maxHeight: 400, marginTop: -5 }}>
+                  style={{ maxHeight: 400, marginTop: -5 ,color:"#000"}}
+                  dropdownIconColor={"#000"}
+                  >
                   {allCategories.map((cat: any) => (
                     <Picker.Item
                       key={cat.id}

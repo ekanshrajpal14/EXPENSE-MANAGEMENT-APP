@@ -34,8 +34,9 @@ const CategoryModal: React.FC<CategoryModalProps> = ({ onCrossClick }) => {
           <Text style={{ fontSize: 20 }}>Category Modal</Text>
           <TextInput
             placeholder="Category Name"
-            style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 20 }}
+            style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginTop: 20,color:"#000" }}
             onChangeText={(text) => setCategoryName(text)}
+            placeholderTextColor={"black"}
           />
           <View style={{ flexDirection: "row-reverse", paddingTop: 20, gap: 10 }}>
             <Pressable
